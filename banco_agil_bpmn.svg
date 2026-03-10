@@ -1,0 +1,391 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1800" width="1400" height="1800" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1400" height="1800" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <rect x="20" y="15" width="1360" height="52" rx="8" fill="#1E3A5F"/>
+  <text x="700" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="white">BPMN – Banco Ágil: Agente Bancário Inteligente</text>
+
+  <!-- ============ LANES ============ -->
+
+  <!-- Lane: Cliente -->
+  <rect x="20" y="75" width="130" height="1700" rx="0" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="85" y="430" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F" transform="rotate(-90,85,430)">Cliente</text>
+
+  <!-- Lane: Agente de Triagem -->
+  <rect x="150" y="75" width="280" height="1700" fill="#EDE9FE" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="290" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95" transform="rotate(-90,290,430)">Agente de Triagem</text>
+
+  <!-- Lane: Agente de Crédito -->
+  <rect x="430" y="75" width="280" height="1700" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1.5"/>
+  <text x="570" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532D" transform="rotate(-90,570,430)">Agente de Crédito</text>
+
+  <!-- Lane: Agente de Entrevista de Crédito -->
+  <rect x="710" y="75" width="300" height="1700" fill="#FEF9C3" stroke="#FDE047" stroke-width="1.5"/>
+  <text x="860" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#713F12" transform="rotate(-90,860,460)">Agente de Entrevista de Crédito</text>
+
+  <!-- Lane: Agente de Câmbio -->
+  <rect x="1010" y="75" width="280" height="1700" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="1.5"/>
+  <text x="1150" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#7F1D1D" transform="rotate(-90,1150,430)">Agente de Câmbio</text>
+
+  <!-- Lane: Sistema / CSV -->
+  <rect x="1290" y="75" width="110" height="1700" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="1345" y="430" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155" transform="rotate(-90,1345,430)">Sistema / CSV</text>
+
+  <!-- Lane headers separator line -->
+  <line x1="20" y1="105" x2="1400" y2="105" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- ============ ELEMENTS ============ -->
+
+  <!-- START EVENT -->
+  <circle cx="85" cy="155" r="18" fill="#22C55E" stroke="#15803D" stroke-width="2.5"/>
+  <text x="85" y="160" text-anchor="middle" font-size="11" fill="white" font-weight="bold">▶</text>
+  <text x="85" y="188" text-anchor="middle" font-size="10" fill="#15803D" font-weight="bold">Início</text>
+
+  <!-- Arrow: Start → Saudação -->
+  <line x1="103" y1="155" x2="175" y2="155" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Saudação Inicial -->
+  <rect x="175" y="130" width="130" height="50" rx="8" fill="#7C3AED" stroke="#4C1D95" stroke-width="1.5"/>
+  <text x="240" y="150" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Saudação</text>
+  <text x="240" y="165" text-anchor="middle" font-size="10" fill="#DDD6FE">Inicial</text>
+
+  <!-- Arrow: Saudação → Coletar CPF -->
+  <line x1="240" y1="180" x2="240" y2="220" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Coletar CPF -->
+  <rect x="175" y="220" width="130" height="50" rx="8" fill="#7C3AED" stroke="#4C1D95" stroke-width="1.5"/>
+  <text x="240" y="248" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Coletar CPF</text>
+
+  <!-- CPF input from Cliente -->
+  <line x1="85" y1="248" x2="175" y2="248" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <text x="130" y="240" text-anchor="middle" font-size="9" fill="#1E40AF">CPF</text>
+
+  <!-- Arrow: Coletar CPF → Coletar DtNasc -->
+  <line x1="240" y1="270" x2="240" y2="310" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Coletar Data Nascimento -->
+  <rect x="175" y="310" width="130" height="50" rx="8" fill="#7C3AED" stroke="#4C1D95" stroke-width="1.5"/>
+  <text x="240" y="332" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Coletar Data de</text>
+  <text x="240" y="347" text-anchor="middle" font-size="10" fill="#DDD6FE">Nascimento</text>
+
+  <!-- DtNasc input from Cliente -->
+  <line x1="85" y1="335" x2="175" y2="335" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <text x="130" y="326" text-anchor="middle" font-size="9" fill="#1E40AF">Dt. Nasc.</text>
+
+  <!-- Arrow: DtNasc → Validar -->
+  <line x1="240" y1="360" x2="240" y2="400" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Validar Autenticação (CSV) -->
+  <rect x="175" y="400" width="130" height="50" rx="8" fill="#7C3AED" stroke="#4C1D95" stroke-width="1.5"/>
+  <text x="240" y="422" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Validar no</text>
+  <text x="240" y="437" text-anchor="middle" font-size="10" fill="#DDD6FE">clientes.csv</text>
+
+  <!-- Read from CSV -->
+  <line x1="305" y1="425" x2="1300" y2="425" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="800" y="418" text-anchor="middle" font-size="9" fill="#64748B">lê clientes.csv</text>
+
+  <!-- Arrow: Validar → Gateway Autenticado? -->
+  <line x1="240" y1="450" x2="240" y2="490" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- GATEWAY: Autenticado? -->
+  <polygon points="240,490 270,515 240,540 210,515" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <text x="240" y="519" text-anchor="middle" font-size="9" fill="#78350F" font-weight="bold">Auth?</text>
+
+  <!-- YES path → Identificar Assunto -->
+  <line x1="270" y1="515" x2="340" y2="515" stroke="#22C55E" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="305" y="508" font-size="9" fill="#15803D" font-weight="bold">Sim</text>
+
+  <!-- NO path down → Tentativas -->
+  <line x1="240" y1="540" x2="240" y2="570" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="248" y="560" font-size="9" fill="#B91C1C" font-weight="bold">Não</text>
+
+  <!-- GATEWAY: Tentativas < 3? -->
+  <polygon points="240,570 270,595 240,620 210,595" fill="#F97316" stroke="#C2410C" stroke-width="2"/>
+  <text x="240" y="594" text-anchor="middle" font-size="8" fill="#431407" font-weight="bold">Tent&lt;3?</text>
+
+  <!-- Sim → voltar coletar CPF (loop) -->
+  <path d="M210,595 Q140,595 140,248 L175,248" fill="none" stroke="#F97316" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrO)"/>
+  <text x="118" y="430" font-size="9" fill="#C2410C" font-weight="bold" transform="rotate(-90,118,430)">Nova tentativa</text>
+
+  <!-- Não (3 falhas) → Encerrar Auth -->
+  <line x1="240" y1="620" x2="240" y2="655" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="248" y="642" font-size="9" fill="#B91C1C">Não (3x)</text>
+
+  <!-- TASK: Informar falha e encerrar -->
+  <rect x="175" y="655" width="130" height="50" rx="8" fill="#DC2626" stroke="#991B1B" stroke-width="1.5"/>
+  <text x="240" y="677" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Informar falha</text>
+  <text x="240" y="692" text-anchor="middle" font-size="10" fill="#FCA5A5">e encerrar</text>
+
+  <!-- END EVENT (auth fail) -->
+  <line x1="240" y1="705" x2="240" y2="735" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+  <circle cx="240" cy="750" r="16" fill="white" stroke="#DC2626" stroke-width="3"/>
+  <circle cx="240" cy="750" r="8" fill="#DC2626"/>
+  <text x="240" y="775" text-anchor="middle" font-size="9" fill="#DC2626">Fim (erro)</text>
+
+  <!-- ============ IDENTIFICAR ASSUNTO ============ -->
+  <!-- TASK: Identificar Assunto (Auth YES continued) -->
+  <rect x="340" y="490" width="150" height="50" rx="8" fill="#7C3AED" stroke="#4C1D95" stroke-width="1.5"/>
+  <text x="415" y="512" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Identificar</text>
+  <text x="415" y="527" text-anchor="middle" font-size="10" fill="#DDD6FE">Assunto</text>
+
+  <!-- Input from Cliente -->
+  <line x1="85" y1="515" x2="175" y2="515" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="175" y1="515" x2="340" y2="515" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <text x="220" y="507" text-anchor="middle" font-size="9" fill="#1E40AF">Assunto</text>
+
+  <!-- Arrow to Gateway Roteamento -->
+  <line x1="490" y1="515" x2="540" y2="515" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- GATEWAY: Roteamento -->
+  <polygon points="560,515 595,545 560,575 525,545" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <text x="560" y="548" text-anchor="middle" font-size="8" fill="#78350F" font-weight="bold">Rota?</text>
+
+  <!-- ===== ROTA CRÉDITO ===== -->
+  <line x1="560" y1="575" x2="560" y2="620" stroke="#22C55E" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="568" y="600" font-size="9" fill="#15803D" font-weight="bold">Crédito</text>
+
+  <!-- TASK: Consultar Limite -->
+  <rect x="490" y="620" width="140" height="50" rx="8" fill="#16A34A" stroke="#14532D" stroke-width="1.5"/>
+  <text x="560" y="642" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Consultar</text>
+  <text x="560" y="657" text-anchor="middle" font-size="10" fill="#BBF7D0">Limite Atual</text>
+
+  <!-- Read CSV -->
+  <line x1="630" y1="645" x2="1300" y2="645" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="900" y="637" text-anchor="middle" font-size="9" fill="#64748B">lê clientes.csv</text>
+
+  <line x1="560" y1="670" x2="560" y2="710" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- GATEWAY: Solicitar Aumento? -->
+  <polygon points="560,710 595,740 560,770 525,740" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <text x="560" y="736" text-anchor="middle" font-size="8" fill="#78350F" font-weight="bold">Aumentar?</text>
+
+  <!-- NÃO → Encerrar -->
+  <line x1="525" y1="740" x2="455" y2="740" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="492" y="732" font-size="9" fill="#B91C1C" font-weight="bold">Não</text>
+
+  <!-- SIM → Capturar novo limite -->
+  <line x1="560" y1="770" x2="560" y2="810" stroke="#22C55E" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="568" y="793" font-size="9" fill="#15803D" font-weight="bold">Sim</text>
+
+  <!-- TASK: Capturar Novo Limite -->
+  <rect x="490" y="810" width="140" height="50" rx="8" fill="#16A34A" stroke="#14532D" stroke-width="1.5"/>
+  <text x="560" y="832" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Capturar Novo</text>
+  <text x="560" y="847" text-anchor="middle" font-size="10" fill="#BBF7D0">Limite Desejado</text>
+
+  <!-- Input cliente -->
+  <line x1="85" y1="835" x2="175" y2="835" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="175" y1="835" x2="430" y2="835" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="430" y1="835" x2="490" y2="835" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <text x="280" y="827" text-anchor="middle" font-size="9" fill="#1E40AF">Novo limite</text>
+
+  <line x1="560" y1="860" x2="560" y2="900" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Registrar solicitação CSV -->
+  <rect x="490" y="900" width="140" height="55" rx="8" fill="#16A34A" stroke="#14532D" stroke-width="1.5"/>
+  <text x="560" y="920" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Registrar em</text>
+  <text x="560" y="935" text-anchor="middle" font-size="9" fill="#BBF7D0">solicitacoes_</text>
+  <text x="560" y="948" text-anchor="middle" font-size="9" fill="#BBF7D0">aumento_limite.csv</text>
+
+  <!-- Write CSV -->
+  <line x1="630" y1="927" x2="1300" y2="927" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="930" y="919" text-anchor="middle" font-size="9" fill="#64748B">grava CSV (status: pendente)</text>
+
+  <line x1="560" y1="955" x2="560" y2="995" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Checar Score x score_limite.csv -->
+  <rect x="490" y="995" width="140" height="55" rx="8" fill="#16A34A" stroke="#14532D" stroke-width="1.5"/>
+  <text x="560" y="1015" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Checar Score</text>
+  <text x="560" y="1030" text-anchor="middle" font-size="9" fill="#BBF7D0">vs score_limite.csv</text>
+
+  <line x1="630" y1="1022" x2="1300" y2="1022" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="930" y="1014" text-anchor="middle" font-size="9" fill="#64748B">lê score_limite.csv</text>
+
+  <line x1="560" y1="1050" x2="560" y2="1090" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- GATEWAY: Score Suficiente? -->
+  <polygon points="560,1090 595,1120 560,1150 525,1120" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <text x="560" y="1115" text-anchor="middle" font-size="8" fill="#78350F" font-weight="bold">Score ok?</text>
+
+  <!-- SIM → Aprovado -->
+  <line x1="595" y1="1120" x2="640" y2="1120" stroke="#22C55E" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="617" y="1112" font-size="9" fill="#15803D" font-weight="bold">Sim</text>
+
+  <rect x="640" y="1095" width="120" height="50" rx="8" fill="#15803D" stroke="#052E16" stroke-width="1.5"/>
+  <text x="700" y="1117" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Aprovar</text>
+  <text x="700" y="1132" text-anchor="middle" font-size="9" fill="#BBF7D0">(status: aprovado)</text>
+
+  <!-- Write aprovado -->
+  <line x1="700" y1="1145" x2="700" y2="1165" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <line x1="700" y1="1165" x2="1300" y2="1165" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="1000" y="1157" text-anchor="middle" font-size="9" fill="#64748B">atualiza CSV</text>
+
+  <!-- NÃO → Reprovado -->
+  <line x1="560" y1="1150" x2="560" y2="1185" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="568" y="1170" font-size="9" fill="#B91C1C" font-weight="bold">Não</text>
+
+  <rect x="490" y="1185" width="140" height="50" rx="8" fill="#DC2626" stroke="#991B1B" stroke-width="1.5"/>
+  <text x="560" y="1207" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Reprovar</text>
+  <text x="560" y="1222" text-anchor="middle" font-size="9" fill="#FCA5A5">(status: rejeitado)</text>
+
+  <!-- Write rejeitado -->
+  <line x1="630" y1="1210" x2="1300" y2="1210" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="970" y="1202" text-anchor="middle" font-size="9" fill="#64748B">atualiza CSV</text>
+
+  <line x1="560" y1="1235" x2="560" y2="1275" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Oferecer Entrevista de Crédito -->
+  <rect x="490" y="1275" width="140" height="55" rx="8" fill="#16A34A" stroke="#14532D" stroke-width="1.5"/>
+  <text x="560" y="1296" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Oferecer</text>
+  <text x="560" y="1311" text-anchor="middle" font-size="9" fill="#BBF7D0">Entrevista de</text>
+  <text x="560" y="1324" text-anchor="middle" font-size="9" fill="#BBF7D0">Crédito</text>
+
+  <line x1="560" y1="1330" x2="560" y2="1370" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- GATEWAY: Aceita Entrevista? -->
+  <polygon points="560,1370 595,1400 560,1430 525,1400" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+  <text x="560" y="1395" text-anchor="middle" font-size="8" fill="#78350F" font-weight="bold">Aceita?</text>
+
+  <!-- NÃO → END Crédito -->
+  <line x1="525" y1="1400" x2="455" y2="1400" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="492" y="1392" font-size="9" fill="#B91C1C" font-weight="bold">Não</text>
+
+  <!-- SIM → Agente Entrevista -->
+  <line x1="595" y1="1400" x2="720" y2="1400" stroke="#22C55E" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="657" y="1392" font-size="9" fill="#15803D" font-weight="bold">Sim</text>
+
+  <!-- ===== AGENTE ENTREVISTA DE CRÉDITO ===== -->
+  <!-- TASK: Entrevista Financeira -->
+  <rect x="720" y="1375" width="170" height="55" rx="8" fill="#CA8A04" stroke="#713F12" stroke-width="1.5"/>
+  <text x="805" y="1396" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Conduzir</text>
+  <text x="805" y="1411" text-anchor="middle" font-size="9" fill="#FEF9C3">Entrevista Financeira</text>
+  <text x="805" y="1424" text-anchor="middle" font-size="8" fill="#FEF9C3">(renda, emprego, dívidas...)</text>
+
+  <!-- Input cliente entrevista -->
+  <line x1="85" y1="1402" x2="175" y2="1402" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="175" y1="1402" x2="710" y2="1402" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <text x="430" y="1395" text-anchor="middle" font-size="9" fill="#1E40AF">Dados Financeiros</text>
+
+  <line x1="805" y1="1430" x2="805" y2="1470" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Calcular Score -->
+  <rect x="720" y="1470" width="170" height="55" rx="8" fill="#CA8A04" stroke="#713F12" stroke-width="1.5"/>
+  <text x="805" y="1491" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Calcular Novo</text>
+  <text x="805" y="1506" text-anchor="middle" font-size="9" fill="#FEF9C3">Score (fórmula)</text>
+  <text x="805" y="1520" text-anchor="middle" font-size="8" fill="#FEF9C3">0 – 1000</text>
+
+  <line x1="805" y1="1525" x2="805" y2="1565" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Atualizar clientes.csv -->
+  <rect x="720" y="1565" width="170" height="50" rx="8" fill="#CA8A04" stroke="#713F12" stroke-width="1.5"/>
+  <text x="805" y="1586" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Atualizar Score em</text>
+  <text x="805" y="1601" text-anchor="middle" font-size="9" fill="#FEF9C3">clientes.csv</text>
+
+  <line x1="890" y1="1590" x2="1300" y2="1590" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="1095" y="1582" text-anchor="middle" font-size="9" fill="#64748B">grava clientes.csv</text>
+
+  <!-- Redireciona de volta ao Agente de Crédito -->
+  <line x1="720" y1="1590" x2="660" y2="1590" stroke="#7C3AED" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrP)"/>
+  <line x1="660" y1="1590" x2="660" y2="1022" stroke="#7C3AED" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="660" y1="1022" x2="630" y2="1022" stroke="#7C3AED" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrP)"/>
+  <text x="648" y="1310" text-anchor="middle" font-size="9" fill="#7C3AED" font-weight="bold" transform="rotate(-90,648,1310)">Retornar ao Ag. Crédito</text>
+
+  <!-- ===== ROTA CÂMBIO ===== -->
+  <line x1="560" y1="545" x2="560" y2="570" stroke="#64748B" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="560" y1="545" x2="1100" y2="545" stroke="#EF4444" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="830" y="537" text-anchor="middle" font-size="9" fill="#B91C1C" font-weight="bold">Câmbio</text>
+
+  <!-- TASK: Buscar Cotação API -->
+  <rect x="1030" y="520" width="140" height="50" rx="8" fill="#DC2626" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="1100" y="542" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Buscar Cotação</text>
+  <text x="1100" y="557" text-anchor="middle" font-size="9" fill="#FCA5A5">via API Externa</text>
+
+  <!-- External API call -->
+  <line x1="1170" y1="545" x2="1290" y2="545" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrG)"/>
+  <text x="1230" y="537" text-anchor="middle" font-size="8" fill="#64748B">API Câmbio</text>
+
+  <line x1="1100" y1="570" x2="1100" y2="610" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- TASK: Apresentar Cotação -->
+  <rect x="1030" y="610" width="140" height="50" rx="8" fill="#DC2626" stroke="#7F1D1D" stroke-width="1.5"/>
+  <text x="1100" y="632" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Apresentar</text>
+  <text x="1100" y="647" text-anchor="middle" font-size="9" fill="#FCA5A5">Cotação ao Cliente</text>
+
+  <!-- Output to Cliente -->
+  <line x1="85" y1="635" x2="175" y2="635" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="175" y1="635" x2="430" y2="635" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="430" y1="635" x2="710" y2="635" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="710" y1="635" x2="1010" y2="635" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrB)"/>
+  <!-- (flows from Câmbio task upward left to client; simplified representation) -->
+
+  <line x1="1100" y1="660" x2="1100" y2="700" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- END câmbio -->
+  <circle cx="1100" cy="716" r="16" fill="white" stroke="#15803D" stroke-width="3"/>
+  <circle cx="1100" cy="716" r="8" fill="#15803D"/>
+  <text x="1100" y="742" text-anchor="middle" font-size="9" fill="#15803D">Fim (Câmbio)</text>
+
+  <!-- ===== END EVENTS (Credit path) ===== -->
+  <!-- END (Não aumento / Não entrevista) -->
+  <circle cx="430" cy="740" r="16" fill="white" stroke="#15803D" stroke-width="3"/>
+  <circle cx="430" cy="740" r="8" fill="#15803D"/>
+  <text x="430" y="766" text-anchor="middle" font-size="9" fill="#15803D">Fim</text>
+
+  <!-- END (Não entrevista após reprovação) -->
+  <circle cx="430" cy="1400" r="16" fill="white" stroke="#15803D" stroke-width="3"/>
+  <circle cx="430" cy="1400" r="8" fill="#15803D"/>
+  <text x="430" y="1426" text-anchor="middle" font-size="9" fill="#15803D">Fim</text>
+
+  <!-- END (Aprovado) -->
+  <line x1="700" y1="1145" x2="700" y2="1200" stroke="#64748B" stroke-width="1.8" marker-end="url(#arr)"/>
+  <circle cx="700" cy="1216" r="16" fill="white" stroke="#15803D" stroke-width="3"/>
+  <circle cx="700" cy="1216" r="8" fill="#15803D"/>
+  <text x="700" y="1242" text-anchor="middle" font-size="9" fill="#15803D">Fim (aprovado)</text>
+
+  <!-- ============ LEGEND ============ -->
+  <rect x="20" y="1740" width="1360" height="45" rx="6" fill="white" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="40" y="1758" font-size="10" fill="#334155" font-weight="bold">Legenda:</text>
+
+  <rect x="110" y="1745" width="24" height="18" rx="4" fill="#7C3AED"/>
+  <text x="140" y="1758" font-size="10" fill="#334155">Ag. Triagem</text>
+
+  <rect x="240" y="1745" width="24" height="18" rx="4" fill="#16A34A"/>
+  <text x="270" y="1758" font-size="10" fill="#334155">Ag. Crédito</text>
+
+  <rect x="370" y="1745" width="24" height="18" rx="4" fill="#CA8A04"/>
+  <text x="400" y="1758" font-size="10" fill="#334155">Ag. Entrevista</text>
+
+  <rect x="510" y="1745" width="24" height="18" rx="4" fill="#DC2626"/>
+  <text x="540" y="1758" font-size="10" fill="#334155">Ag. Câmbio</text>
+
+  <polygon points="640,1745 658,1763 640,1763 622,1763" fill="#FBBF24" stroke="#D97706" stroke-width="1.5"/>
+  <text x="670" y="1758" font-size="10" fill="#334155">Gateway (decisão)</text>
+
+  <line x1="810" y1="1754" x2="840" y2="1754" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="850" y="1758" font-size="10" fill="#334155">Fluxo de dados (entrada usuário)</text>
+
+  <line x1="1060" y1="1754" x2="1090" y2="1754" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="1100" y="1758" font-size="10" fill="#334155">Leitura/Escrita CSV / API</text>
+
+  <!-- ===== Version info ===== -->
+  <text x="110" y="1778" font-size="9" fill="#94A3B8">Banco Ágil – Fluxo BPMN v1.0 | Gerado automaticamente</text>
+
+  <!-- ============ MARKERS ============ -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+    </marker>
+    <marker id="arrB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F97316"/>
+    </marker>
+    <marker id="arrP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7C3AED"/>
+    </marker>
+  </defs>
+</svg>

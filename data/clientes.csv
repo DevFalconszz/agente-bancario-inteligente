@@ -1,0 +1,7 @@
+cpf,nome,data_nascimento,email,telefone,score,limite_atual
+12345678901,João Silva,15/05/1985,joao.silva@email.com,11987654321,750,10000.00
+23456789012,Maria Santos,22/08/1990,maria.santos@email.com,21976543210,680,3000.0
+34567890123,Pedro Oliveira,10/03/1978,pedro.oliveira@email.com,31965432109,820,10000.0
+45678901234,Ana Costa,05/12/1995,ana.costa@email.com,41954321098,590,2000.0
+56789012345,Carlos Ferreira,30/07/1982,carlos.ferreira@email.com,51943210987,710,4500.0
+70375697128,Novo Cliente,17/11/2004,novo.cliente@email.com,61932109876,799,10000.00
