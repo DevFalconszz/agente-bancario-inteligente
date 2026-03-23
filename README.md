@@ -112,3 +112,7 @@ streamlit run app.py
     - *Solução:* Refatoração dos métodos de escrita do Pandas para usar normalização de CPF (`zfill`) antes de qualquer busca ou edição.
 3.  **Instrução de Sistema:** O modelo tentava criar processos burocráticos (pedir RG/Renda).
     - *Solução:* Refinamento do `SystemMessage` com **Regras Críticas** em caixa alta, instruindo o modelo sobre o que ele NÃO deve fazer.
+
+---
+
+# FRACASSO
